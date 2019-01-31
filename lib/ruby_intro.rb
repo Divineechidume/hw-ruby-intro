@@ -52,14 +52,20 @@ end
 # Part 2
 
 def hello(name)
+	return "Hello, #{name}"
   # YOUR CODE HERE
 end
 
 def starts_with_consonant? s
+	return s[0] =~ /\A(?=[^aeiou])(?=[a-z])/i
   # YOUR CODE HERE
 end
 
 def binary_multiple_of_4? s
+	if s.to_i % 4 == 0 and s.match(/^(\d)+$/)
+		return true
+	end
+	return false
   # YOUR CODE HERE
 end
 
